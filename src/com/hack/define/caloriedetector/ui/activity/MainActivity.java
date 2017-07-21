@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,8 +21,9 @@ import io.codetail.animation.ViewAnimationUtils;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    FloatingActionButton fab;
-    RecyclerView foodRecyclerView;
+    FloatingActionButton mFab;
+    RecyclerView mRecyclerView;
+    NestedScrollView mScrollView;
     TextView cardTv;
     FoodAdapter mAdapter;
 
@@ -35,20 +37,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
+        mScrollView = (NestedScrollView) findViewById(R.id.main_scroll_view);
         cardTv = (TextView) findViewById(R.id.main_card_text);
-        foodRecyclerView = (RecyclerView) findViewById(R.id.main_list);
+        mRecyclerView = (RecyclerView) findViewById(R.id.main_list);
 
-        foodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        foodRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setNestedScrollingEnabled(false);
+        mScrollView.smoothScrollTo(0, 0);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 View v = findViewById(R.id.cutscenes_view);
                 // get the center for the clipping circle
-                int cx = (fab.getLeft() + fab.getRight()) / 2;
-                int cy = (fab.getTop() + fab.getBottom()) / 2;
+                int cx = (mFab.getLeft() + mFab.getRight()) / 2;
+                int cy = (mFab.getTop() + mFab.getBottom()) / 2;
                 v.setVisibility(View.VISIBLE);
                 float finalRadius = (float) Math.hypot(cx, cy);
                 Animator animator =

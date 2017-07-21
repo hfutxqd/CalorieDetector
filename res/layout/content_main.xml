@@ -9,6 +9,8 @@
     tools:showIn="@layout/activity_main">
     <android.support.v4.widget.NestedScrollView
         android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/main_scroll_view"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout

@@ -615,7 +615,7 @@ Dungeness crab,珍宝蟹,86.0,http://fitness.39.net/food/10514.html
 rock crab,岩蟹
 fiddler crab,招潮蟹
 king crab,帝王蟹,84.0,http://fitness.39.net/food/10521.html
-American lobster,美洲龙虾
+American lobster,美洲龙虾,90.0,http://fitness.39.net/food/4194.html
 spiny lobster,龙虾,90.0,http://fitness.39.net/food/4194.html
 crayfish,小龙虾,93.0,http://fitness.39.net/food/4199.html
 hermit crab,寄居蟹
