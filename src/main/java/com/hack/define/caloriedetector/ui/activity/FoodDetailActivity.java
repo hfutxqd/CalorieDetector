@@ -13,8 +13,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hack.define.caloriedetector.R;
+import com.hack.define.caloriedetector.data.DetectResult;
 import com.hack.define.caloriedetector.server.FoodServer;
 import com.hack.define.caloriedetector.server.model.Food;
 
@@ -23,11 +25,13 @@ import java.lang.ref.WeakReference;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class FoodDetailActivity extends AppCompatActivity {
     public static final String EXTRA_URL = "extra_url";
     public static final String EXTRA_TITLE = "extra_title";
     public static final String EXTRA_SUBTITLE = "extra_subtitle";
+    public static final String EXTRA_FOOD_DATA = "extra_food";
 
     @BindView(R.id.iv_food)
     ImageView mFoodBanner;
@@ -52,6 +56,10 @@ public class FoodDetailActivity extends AppCompatActivity {
     @BindView(R.id.item_area_title)
     TextView mItemAreaTitle;
 
+    private DetectResult mData;
+    private boolean hasCollected;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,14 +70,24 @@ public class FoodDetailActivity extends AppCompatActivity {
         String url = intent.getStringExtra(EXTRA_URL);
         String title = intent.getStringExtra(EXTRA_TITLE);
         String subTitle = intent.getStringExtra(EXTRA_SUBTITLE);
+
         if (!TextUtils.isEmpty(url) && !TextUtils.isEmpty(title)) {
             new LoadDetailTask(this).execute(url);
             mTvTitle.setText(title);
             mTvSubTitle.setText(subTitle);
         }
+        mData = intent.getParcelableExtra(EXTRA_FOOD_DATA);
         mLoadingProgress.show();
+    }
 
-
+    @OnClick(R.id.fab_collect)
+    void collectItemClick() {
+        if (mData != null && !hasCollected) {
+            mData.setIsCollected(1);
+            mData.update();
+            hasCollected = true;
+            Toast.makeText(this, "收藏成功", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public static void startActivity(Context context, String url, String title, String subTitle) {
@@ -79,6 +97,16 @@ public class FoodDetailActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_SUBTITLE, subTitle);
         context.startActivity(intent);
     }
+
+    public static void startActivity(Context context, String url, String title, String subTitle,DetectResult data) {
+        Intent intent = new Intent(context, FoodDetailActivity.class);
+        intent.putExtra(EXTRA_URL, url);
+        intent.putExtra(EXTRA_TITLE, title);
+        intent.putExtra(EXTRA_SUBTITLE, subTitle);
+        intent.putExtra(EXTRA_FOOD_DATA,data);
+        context.startActivity(intent);
+    }
+
 
     private static class LoadDetailTask extends AsyncTask<String, Void, Food> {
 

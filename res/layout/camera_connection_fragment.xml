@@ -61,7 +61,7 @@
     <ImageButton
         android:id="@+id/btn_bottom_nxt"
         android:background="@drawable/white_oval"
-        android:src="@drawable/ic_done_black_24dp"
+        android:src="@drawable/ic_sad"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
