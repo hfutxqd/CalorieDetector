@@ -289,7 +289,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                                             mBestMatchRate = bestMatch.getConfidence();
                                         } else {
                                             possibleHint = " 这个好像不能吃";
-                                            mBtnNxt.setImageResource(R.drawable.ic_sad);
+                                            mBtnNxt.setImageResource(R.drawable.selector_sad_happy);
                                             mBestMatchRate = -1;
                                         }
                                         mTipHint.setText(possibleHint);

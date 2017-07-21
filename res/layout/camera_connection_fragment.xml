@@ -15,7 +15,8 @@
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.hack.define.caloriedetector.widget.AutoFitTextureView
         android:id="@+id/texture"
@@ -58,14 +59,16 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true" />
 
-    <ImageButton
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_bottom_nxt"
-        android:background="@drawable/white_oval"
-        android:src="@drawable/ic_sad"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="18dp"
-        android:layout_width="54dp"
-        android:layout_height="54dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="@color/white_full"
+        android:src="@drawable/selector_sad_happy"
+        app:rippleColor="@color/white_full"/>
 
 </RelativeLayout>

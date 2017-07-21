@@ -144,6 +144,7 @@
             <ImageButton
                 android:src="@drawable/ic_swiming"
                 android:layout_gravity="center"
+                android:foreground="?attr/selectableItemBackground"
                 android:background="@drawable/white_oval"
                 android:layout_width="50dp"
                 android:layout_height="50dp" />
