@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.ContentLoadingProgressBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hack.define.caloriedetector.R;
@@ -42,6 +45,10 @@ public class FoodDetailActivity extends AppCompatActivity {
     TextView mItemTip2;
     @BindView(R.id.item_tip3)
     TextView mItemTip3;
+    @BindView(R.id.item_area)
+    LinearLayout mItemsArea;
+    @BindView(R.id.loading_progress)
+    ContentLoadingProgressBar mLoadingProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,8 @@ public class FoodDetailActivity extends AppCompatActivity {
             mTvTitle.setText(title);
             mTvSubTitle.setText(subTitle);
         }
+        mLoadingProgress.show();
+
 
     }
 
@@ -93,18 +102,29 @@ public class FoodDetailActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Food food) {
             if (mWeakRefActivity.get() != null) {
+                FoodDetailActivity activity = mWeakRefActivity.get();
+
                 if (food != null) {
                     // TODO: 2017/7/21 update ui
                     Log.d("wtf", food.toString());
-                    FoodDetailActivity activity = mWeakRefActivity.get();
-                    activity.mTvDescription.setText(food.advantages + "。" + food.disadvantages);
+                    StringBuilder sb = new StringBuilder();
+                    if (!TextUtils.equals(food.advantages, "有利：")) {
+                        sb.append(food.advantages);
+                        sb.append("。");
+                    }
+                    if (!TextUtils.equals(food.disadvantages, "不利：")) {
+                        sb.append(food.disadvantages);
+                        sb.append("。");
+                    }
+                    activity.mTvDescription.setText(sb.toString());
+                    activity.mItemsArea.setVisibility(View.VISIBLE);
                     activity.mItemTip1.setText(food.running);
                     activity.mItemTip2.setText(food.skipping);
                     activity.mItemTip3.setText(food.aerobics);
-
                 } else {
                     Log.d("wtf", "get detail failed");
                 }
+                activity.mLoadingProgress.hide();
             }
         }
     }

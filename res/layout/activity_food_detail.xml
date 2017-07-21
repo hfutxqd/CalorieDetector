@@ -45,16 +45,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+
+
     <TextView
         android:id="@+id/tv_adv"
         android:layout_below="@id/title_area"
         android:padding="12dp"
+        android:textSize="17sp"
         tools:text="Today, bananas are grown in at least 107 countries and are ranked fourth among the . Americans consume more bananas ..."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/loading_progress"
         android:layout_below="@id/tv_adv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp" />
+
+    <LinearLayout
+        android:id="@+id/item_area"
+        android:layout_below="@id/tv_adv"
+        android:visibility="invisible"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="center"
