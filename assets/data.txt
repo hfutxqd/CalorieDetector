@@ -316,7 +316,7 @@ pool table,台球桌
 dining table,餐桌
 entertainment center,娱乐中心
 wardrobe,衣柜
-Granny Smith,澳洲青苹
+Granny Smith,青苹果,http://fitness.39.net/food/19777.html
 orange,橙色
 lemon,柠檬,35.0,http://fitness.39.net/food/2481.html
 fig,图

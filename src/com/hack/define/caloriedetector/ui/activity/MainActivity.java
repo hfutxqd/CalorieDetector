@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        mAdapter.update();
         findViewById(R.id.cutscenes_view).setVisibility(View.INVISIBLE);
     }
 }

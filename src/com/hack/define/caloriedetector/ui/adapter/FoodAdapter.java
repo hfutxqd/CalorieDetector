@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.hack.define.caloriedetector.R;
 import com.hack.define.caloriedetector.data.DetectResult;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
+import com.raizlabs.android.dbflow.sql.language.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +30,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
 
     public void update() {
         mData.clear();
-
+        mData.addAll(new Select()
+                .from(DetectResult.class)
+                .queryList());
         notifyDataSetChanged();
     }
 
