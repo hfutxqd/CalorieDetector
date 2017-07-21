@@ -49,12 +49,14 @@
 
     <TextView
         android:id="@+id/tv_adv"
-        android:layout_below="@id/title_area"
+        android:lineSpacingExtra="5dp"
         android:padding="12dp"
         android:textSize="17sp"
         tools:text="Today, bananas are grown in at least 107 countries and are ranked fourth among the . Americans consume more bananas ..."
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_area"
+        android:layout_alignParentStart="true" />
 
     <android.support.v4.widget.ContentLoadingProgressBar
         android:id="@+id/loading_progress"
@@ -64,12 +66,24 @@
         android:layout_width="45dp"
         android:layout_height="45dp" />
 
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/item_area_title"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/tv_adv"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17sp"
+        android:text="消耗掉需要："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <LinearLayout
         android:id="@+id/item_area"
-        android:layout_below="@id/tv_adv"
+        android:layout_below="@id/item_area_title"
         android:visibility="invisible"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -81,10 +95,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageButton
+                android:src="@drawable/ic_running"
                 android:layout_gravity="center"
                 android:background="@drawable/white_oval"
-                android:layout_width="45dp"
-                android:layout_height="45dp" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/item_tip1"
@@ -103,10 +118,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageButton
+                android:src="@drawable/ic_skipping"
                 android:layout_gravity="center"
                 android:background="@drawable/white_oval"
-                android:layout_width="45dp"
-                android:layout_height="45dp" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/item_tip2"
@@ -123,10 +139,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageButton
+                android:src="@drawable/ic_swiming"
                 android:layout_gravity="center"
                 android:background="@drawable/white_oval"
-                android:layout_width="45dp"
-                android:layout_height="45dp" />
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
 
             <TextView
                 android:id="@+id/item_tip3"
@@ -137,5 +154,6 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
 </RelativeLayout>

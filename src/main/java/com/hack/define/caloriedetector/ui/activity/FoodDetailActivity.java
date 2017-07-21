@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hack.define.caloriedetector.R;
-import com.hack.define.caloriedetector.data.DetectResult;
 import com.hack.define.caloriedetector.server.FoodServer;
 import com.hack.define.caloriedetector.server.model.Food;
 
@@ -50,6 +49,8 @@ public class FoodDetailActivity extends AppCompatActivity {
     LinearLayout mItemsArea;
     @BindView(R.id.loading_progress)
     ContentLoadingProgressBar mLoadingProgress;
+    @BindView(R.id.item_area_title)
+    TextView mItemAreaTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +119,7 @@ public class FoodDetailActivity extends AppCompatActivity {
                         sb.append("。");
                     }
                     activity.mTvDescription.setText(sb.toString());
+                    activity.mItemAreaTitle.setVisibility(View.VISIBLE);
                     activity.mItemsArea.setVisibility(View.VISIBLE);
                     activity.mItemTip1.setText(food.running);
                     activity.mItemTip2.setText(food.skipping);
