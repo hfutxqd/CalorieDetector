@@ -19,12 +19,9 @@ public class MyApplication extends Application {
 
     private static HashMap<String,DetectResult> mData = new HashMap<>();
 
-
-
     @Override
     public void onCreate() {
         super.onCreate();
-
         new AsyncTask<Void,Void,Void>() {
             @Override
             protected Void doInBackground(Void... params) {

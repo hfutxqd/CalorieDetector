@@ -20,4 +20,5 @@
     <string name="app_name">Calorie Detector</string>
     <string name="activity_name_classification">TF Classify</string>
     <string name="title_activity_main">Calorie Detector</string>
+    <string name="main_card_title">历史记录</string>
 </resources>

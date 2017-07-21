@@ -10,6 +10,9 @@ public class DetectResult {
     public float calorie;
     public String detailUrl;
 
+    public DetectResult() {
+    }
+
     public DetectResult(String id, String name, float calorie, String detailUrl) {
         this.id = id;
         this.name = name;
