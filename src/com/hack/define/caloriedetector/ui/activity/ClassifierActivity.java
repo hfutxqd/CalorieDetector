@@ -158,6 +158,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                 if (mDetectResult != null) {
                     if (mDetectResult.detailUrl != null) {
                         String subTitle = mDetectResult.calorie + " cal / 500g";
+                        mDetectResult.save();
                         FoodDetailActivity.startActivity(ClassifierActivity.this,mDetectResult.detailUrl,mDetectResult.name,subTitle);
                     } else {
                         Toast.makeText(ClassifierActivity.this, "暂无详情", Toast.LENGTH_SHORT).show();

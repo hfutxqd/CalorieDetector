@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hack.define.caloriedetector.R;
+import com.hack.define.caloriedetector.data.DetectResult;
 import com.hack.define.caloriedetector.server.FoodServer;
 import com.hack.define.caloriedetector.server.model.Food;
 
