@@ -31,6 +31,7 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.hack.define.caloriedetector.MyApplication;
@@ -109,6 +110,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private View mTipView;
     private TextView mTipTitle;
     private TextView mTipHint;
+    private ImageButton mBtnNxt;
 
     @Override
     protected int getLayoutId() {
@@ -147,6 +149,8 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         mTipView = findViewById(R.id.tip_view);
         mTipTitle = (TextView) findViewById(R.id.tip_title);
         mTipHint = (TextView) findViewById(R.id.tip_hint);
+
+        mBtnNxt = (ImageButton) findViewById(R.id.btn_bottom_nxt);
 
         final Display display = getWindowManager().getDefaultDisplay();
         final int screenOrientation = display.getRotation();
@@ -259,8 +263,11 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                                         mTipTitle.setText(food.name);
                                         if (food.detailUrl != null) {
                                             possibleHint = "可能性" + bestMatch.getConfidence();
+                                            mBtnNxt.setImageResource(R.drawable.ic_done_black_24dp);
+
                                         } else {
                                             possibleHint = " 这个好像不能吃";
+                                            mBtnNxt.setImageResource(R.drawable.ic_sad);
                                         }
                                         mTipHint.setText(possibleHint);
 
