@@ -30,28 +30,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="8dp"
-                app:contentPadding="16dp"
                 app:cardElevation="@dimen/cardview_compat_inset_shadow"
-                app:cardBackgroundColor="@color/cardview_light_background">
-                <LinearLayout
+                app:cardBackgroundColor="@color/cardview_light_background"
+                >
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/test_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <View
+                        android:background="@drawable/titile_shadow"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"/>
                     <TextView
+                        android:id="@+id/summery_title"
+                        android:paddingTop="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="6dp"
                         android:text="@string/main_card_title"
-                        android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
+                        android:layout_below="@id/summery_title"
+                        android:paddingLeft="16dp"
                         tools:text="sujnarfljlj sfsfsfsfsfs"
                         android:id="@+id/main_card_text"
                         android:layout_marginTop="6dp"
-                        android:textColor="@color/black_54p"
-                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
-                </LinearLayout>
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/main_list"

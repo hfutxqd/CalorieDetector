@@ -71,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mAdapter.update();
+        if (mAdapter.getItemCount() != 0) {
+            cardTv.setText("为您一共匹配过" + mAdapter.getItemCount() + " 次食物");
+        } else {
+            cardTv.setText("暂无历史记录");
+        }
         findViewById(R.id.cutscenes_view).setVisibility(View.INVISIBLE);
     }
 }
