@@ -79,7 +79,7 @@ android {
 
     if (nativeBuildSystem == 'cmake') {
         defaultConfig {
-            applicationId = 'com.tensorflow.demo'
+            applicationId = 'com.hack.define.caloriedetector'
             minSdkVersion 21
             targetSdkVersion 23
             ndk {
@@ -97,6 +97,7 @@ android {
             }
         }
     }
+
 
     lintOptions {
         abortOnError false
@@ -188,4 +189,7 @@ dependencies {
     if (nativeBuildSystem == 'cmake' || nativeBuildSystem == 'none') {
         compile 'org.tensorflow:tensorflow-android:+'
     }
+
+    compile 'com.github.satyan:sugar:1.5'
+    compile 'org.jsoup:jsoup:1.10.3'
 }

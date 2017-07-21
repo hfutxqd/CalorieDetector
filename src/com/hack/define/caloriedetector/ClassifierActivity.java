@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.demo;
+package com.hack.define.caloriedetector;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -31,13 +31,13 @@ import android.os.Trace;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
+
+import com.hack.define.caloriedetector.env.BorderedText;
+import com.hack.define.caloriedetector.env.ImageUtils;
+import com.hack.define.caloriedetector.env.Logger;
+
 import java.util.List;
 import java.util.Vector;
-import org.tensorflow.demo.OverlayView.DrawCallback;
-import org.tensorflow.demo.env.BorderedText;
-import org.tensorflow.demo.env.ImageUtils;
-import org.tensorflow.demo.env.Logger;
-import org.tensorflow.demo.R;
 
 public class ClassifierActivity extends CameraActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
@@ -157,7 +157,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     yuvBytes = new byte[3][];
 
     addCallback(
-        new DrawCallback() {
+        new OverlayView.DrawCallback() {
           @Override
           public void drawCallback(final Canvas canvas) {
             renderDebug(canvas);
