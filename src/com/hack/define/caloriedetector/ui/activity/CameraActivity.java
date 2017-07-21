@@ -48,7 +48,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
 
   private boolean debug = false;
 
-  private Handler handler;
+  private Handler mbgHandler;
   private HandlerThread handlerThread;
 
   @Override
@@ -79,7 +79,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
 
     handlerThread = new HandlerThread("inference");
     handlerThread.start();
-    handler = new Handler(handlerThread.getLooper());
+    mbgHandler = new Handler(handlerThread.getLooper());
   }
 
   @Override
@@ -95,7 +95,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
     try {
       handlerThread.join();
       handlerThread = null;
-      handler = null;
+      mbgHandler = null;
     } catch (final InterruptedException e) {
       LOGGER.e(e, "Exception!");
     }
@@ -116,11 +116,10 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
   }
 
   protected synchronized void runInBackground(final Runnable r) {
-    if (handler != null) {
-      handler.post(r);
+    if (mbgHandler != null) {
+      mbgHandler.post(r);
     }
   }
-
   @Override
   public void onRequestPermissionsResult(
       final int requestCode, final String[] permissions, final int[] grantResults) {

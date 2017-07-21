@@ -15,7 +15,6 @@
  */
 
 package com.hack.define.caloriedetector.ui.activity;
-
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -27,19 +26,22 @@ import android.media.Image.Plane;
 import android.media.ImageReader;
 import android.media.ImageReader.OnImageAvailableListener;
 import android.os.SystemClock;
-import android.os.Trace;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
+import android.view.View;
+import android.widget.TextView;
 
+import com.hack.define.caloriedetector.MyApplication;
 import com.hack.define.caloriedetector.R;
+import com.hack.define.caloriedetector.data.Food;
 import com.hack.define.caloriedetector.env.BorderedText;
 import com.hack.define.caloriedetector.env.ImageUtils;
 import com.hack.define.caloriedetector.env.Logger;
 import com.hack.define.caloriedetector.model.Classifier;
 import com.hack.define.caloriedetector.model.TensorFlowImageClassifier;
+import com.hack.define.caloriedetector.ui.activity.CameraActivity;
 import com.hack.define.caloriedetector.widget.OverlayView;
-import com.hack.define.caloriedetector.widget.ResultsView;
 
 import java.util.List;
 import java.util.Vector;
@@ -71,7 +73,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
 
   private static final String MODEL_FILE = "file:///android_asset/tensorflow_inception_graph.pb";
   private static final String LABEL_FILE =
-      "file:///android_asset/imagenet_comp_graph_label_strings.txt";
+          "file:///android_asset/imagenet_comp_graph_label_strings.txt";
 
   private static final boolean SAVE_PREVIEW_BITMAP = false;
 
@@ -97,11 +99,15 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   private Matrix frameToCropTransform;
   private Matrix cropToFrameTransform;
 
-  private ResultsView resultsView;
+//  private ResultsView resultsView;
+
 
   private BorderedText borderedText;
 
   private long lastProcessingTimeMs;
+  private View mTipView;
+  private TextView mTipTitle;
+  private TextView mTipHint;
 
   @Override
   protected int getLayoutId() {
@@ -118,25 +124,28 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
   @Override
   public void onPreviewSizeChosen(final Size size, final int rotation) {
     final float textSizePx =
-        TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
+            TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());
     borderedText = new BorderedText(textSizePx);
     borderedText.setTypeface(Typeface.MONOSPACE);
 
     classifier =
-        TensorFlowImageClassifier.create(
-            getAssets(),
-            MODEL_FILE,
-            LABEL_FILE,
-            INPUT_SIZE,
-            IMAGE_MEAN,
-            IMAGE_STD,
-            INPUT_NAME,
-            OUTPUT_NAME);
+            TensorFlowImageClassifier.create(
+                    getAssets(),
+                    MODEL_FILE,
+                    LABEL_FILE,
+                    INPUT_SIZE,
+                    IMAGE_MEAN,
+                    IMAGE_STD,
+                    INPUT_NAME,
+                    OUTPUT_NAME);
 
-    resultsView = (ResultsView) findViewById(R.id.results);
+//    resultsView = (ResultsView) findViewById(R.id.results);
     previewWidth = size.getWidth();
     previewHeight = size.getHeight();
+    mTipView = findViewById(R.id.tip_view);
+    mTipTitle = (TextView) findViewById(R.id.tip_title);
+    mTipHint = (TextView) findViewById(R.id.tip_hint);
 
     final Display display = getWindowManager().getDefaultDisplay();
     final int screenOrientation = display.getRotation();
@@ -151,10 +160,10 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     croppedBitmap = Bitmap.createBitmap(INPUT_SIZE, INPUT_SIZE, Config.ARGB_8888);
 
     frameToCropTransform =
-        ImageUtils.getTransformationMatrix(
-            previewWidth, previewHeight,
-            INPUT_SIZE, INPUT_SIZE,
-            sensorOrientation, MAINTAIN_ASPECT);
+            ImageUtils.getTransformationMatrix(
+                    previewWidth, previewHeight,
+                    INPUT_SIZE, INPUT_SIZE,
+                    sensorOrientation, MAINTAIN_ASPECT);
 
     cropToFrameTransform = new Matrix();
     frameToCropTransform.invert(cropToFrameTransform);
@@ -162,12 +171,12 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     yuvBytes = new byte[3][];
 
     addCallback(
-        new OverlayView.DrawCallback() {
-          @Override
-          public void drawCallback(final Canvas canvas) {
-            renderDebug(canvas);
-          }
-        });
+            new OverlayView.DrawCallback() {
+              @Override
+              public void drawCallback(final Canvas canvas) {
+                renderDebug(canvas);
+              }
+            });
   }
 
   @Override
@@ -187,7 +196,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
       }
       computing = true;
 
-      Trace.beginSection("imageAvailable");
 
       final Plane[] planes = image.getPlanes();
       fillBytes(planes, yuvBytes);
@@ -196,15 +204,15 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
       final int uvRowStride = planes[1].getRowStride();
       final int uvPixelStride = planes[1].getPixelStride();
       ImageUtils.convertYUV420ToARGB8888(
-          yuvBytes[0],
-          yuvBytes[1],
-          yuvBytes[2],
-          previewWidth,
-          previewHeight,
-          yRowStride,
-          uvRowStride,
-          uvPixelStride,
-          rgbBytes);
+              yuvBytes[0],
+              yuvBytes[1],
+              yuvBytes[2],
+              previewWidth,
+              previewHeight,
+              yRowStride,
+              uvRowStride,
+              uvPixelStride,
+              rgbBytes);
 
       image.close();
     } catch (final Exception e) {
@@ -212,7 +220,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         image.close();
       }
       LOGGER.e(e, "Exception!");
-      Trace.endSection();
       return;
     }
 
@@ -226,21 +233,47 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     }
 
     runInBackground(
-        new Runnable() {
-          @Override
-          public void run() {
-            final long startTime = SystemClock.uptimeMillis();
-            final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
-            lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
+            new Runnable() {
+              @Override
+              public void run() {
+                final long startTime = SystemClock.uptimeMillis();
+                final List<Classifier.Recognition> results = classifier.recognizeImage(croppedBitmap);
+                lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
 
-            cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
-            resultsView.setResults(results);
-            requestRender();
-            computing = false;
-          }
-        });
+                cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
+                runOnUiThread(new Runnable() {
+                  @Override
+                  public void run() {
+                    if (results != null && results.size() > 0) {
+                      Classifier.Recognition bestMatch;
+                      bestMatch = results.get(0);
+                      for (final Classifier.Recognition recog : results) {
+                        if (recog.getConfidence() > bestMatch.getConfidence())
+                          bestMatch = recog;
+                      }
+                      Food food = MyApplication.getCacheData().get(bestMatch.getTitle());
+                      if (food != null) {
+                        String possibleHint = null;
+                        // draw tip
+                        mTipTitle.setText(food.name);
+                        if (food.detailUrl != null) {
+                          possibleHint = "可能性" + bestMatch.getConfidence();
+                        } else {
+                          possibleHint = " 这个好像不能吃";
+                        }
+                        mTipHint.setText(possibleHint);
 
-    Trace.endSection();
+                      }
+
+                    }
+                  }
+                });
+//                        resultsView.setResults(results);
+                requestRender();
+                computing = false;
+              }
+            });
+
   }
 
   @Override
@@ -258,8 +291,8 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
       final float scaleFactor = 2;
       matrix.postScale(scaleFactor, scaleFactor);
       matrix.postTranslate(
-          canvas.getWidth() - copy.getWidth() * scaleFactor,
-          canvas.getHeight() - copy.getHeight() * scaleFactor);
+              canvas.getWidth() - copy.getWidth() * scaleFactor,
+              canvas.getHeight() - copy.getHeight() * scaleFactor);
       canvas.drawBitmap(copy, matrix, new Paint());
 
       final Vector<String> lines = new Vector<String>();

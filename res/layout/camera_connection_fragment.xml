@@ -23,11 +23,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
-    <com.hack.define.caloriedetector.widget.RecognitionScoreView
-        android:id="@+id/results"
+
+
+    <RelativeLayout
+        android:id="@+id/tip_view"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:layout_alignParentTop="true" />
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        xmlns:tools="http://schemas.android.com/tools">
+        <TextView
+            android:id="@+id/tip_title"
+            tools:text="苹果"
+            android:textSize="30sp"
+            android:layout_marginTop="15dp"
+            android:textColor="#ccffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tip_hint"
+            tools:text="是苹果的概率估计19%"
+            android:textColor="#ccffffff"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_below="@id/tip_title"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
     <com.hack.define.caloriedetector.widget.OverlayView
         android:id="@+id/debug_overlay"
