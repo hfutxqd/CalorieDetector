@@ -13,6 +13,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="8dp"
+        android:foreground="?attr/selectableItemBackground"
         card_view:cardBackgroundColor="@color/white_full"
         card_view:cardCornerRadius="5dp"
         card_view:cardElevation="2dp">

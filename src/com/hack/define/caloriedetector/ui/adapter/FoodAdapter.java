@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.hack.define.caloriedetector.R;
 import com.hack.define.caloriedetector.data.DetectResult;
+import com.hack.define.caloriedetector.ui.activity.ClassifierActivity;
+import com.hack.define.caloriedetector.ui.activity.FoodDetailActivity;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.raizlabs.android.dbflow.sql.language.Select;
 
@@ -45,10 +47,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
 
     @Override
     public void onBindViewHolder(FoodHolder holder, int position) {
-        holder.text1.setText(mData.get(position).name);
-        holder.text2.setText(mData.get(position).id);
-        holder.energy.setText(String.format(Locale.getDefault(),
-                "%.1f卡/100克", mData.get(position).calorie));
+        holder.bind(mData.get(position));
     }
 
     @Override
@@ -69,6 +68,21 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
             text2 = (TextView) itemView.findViewById(R.id.food_item_text2);
             energy = (TextView) itemView.findViewById(R.id.food_item_energy);
             icon = (ImageView) itemView.findViewById(R.id.food_item_icon);
+        }
+
+        public void bind(DetectResult r) {
+            text1.setText(r.name);
+            text2.setText(r.id);
+            energy.setText(String.format(Locale.getDefault(),
+                    "%.1f卡/100克", r.calorie));
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DetectResult r = mData.get(getAdapterPosition());
+                    FoodDetailActivity.startActivity(v.getContext(),r.detailUrl,r.name,
+                            String.format(Locale.getDefault(), "%.1f卡/100克", r.calorie),r);
+                }
+            });
         }
     }
 }

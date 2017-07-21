@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new FoodAdapter();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         mFab = (FloatingActionButton) findViewById(R.id.fab);
         mScrollView = (NestedScrollView) findViewById(R.id.main_scroll_view);
