@@ -112,6 +112,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private TextView mTipHint;
     private ImageButton mBtnNxt;
     private DetectResult mDetectResult;
+    private float mBestMatchRate = -1;
 
     @Override
     protected int getLayoutId() {
@@ -252,6 +253,11 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             ImageUtils.saveBitmap(croppedBitmap);
         }
 
+        // 识别到食物后停止识别
+        if (mDetectResult != null && mDetectResult.detailUrl != null && mBestMatchRate > 0.3f) {
+            return;
+        }
+
         runInBackground(
                 new Runnable() {
                     @Override
@@ -278,12 +284,13 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                                         // draw tip
                                         mTipTitle.setText(food.name);
                                         if (food.detailUrl != null) {
-                                            possibleHint = "可能性" + bestMatch.getConfidence();
+                                            possibleHint = "可能性 " + (int)(bestMatch.getConfidence() * 100) + " %       卡路里：" + mDetectResult.calorie;
                                             mBtnNxt.setImageResource(R.drawable.ic_done_black_24dp);
-
+                                            mBestMatchRate = bestMatch.getConfidence();
                                         } else {
                                             possibleHint = " 这个好像不能吃";
                                             mBtnNxt.setImageResource(R.drawable.ic_sad);
+                                            mBestMatchRate = -1;
                                         }
                                         mTipHint.setText(possibleHint);
 
