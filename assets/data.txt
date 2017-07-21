@@ -318,18 +318,18 @@ entertainment center,娱乐中心
 wardrobe,衣柜
 Granny Smith,澳洲青苹
 orange,橙色
-lemon,柠檬
+lemon,柠檬,35.0,http://fitness.39.net/food/2481.html
 fig,图
-pineapple,菠萝
-banana,香蕉
-jackfruit,菠萝蜜
-custard apple,蛋奶冻苹果
-pomegranate,石榴
-acorn,橡子
+pineapple,菠萝,50.0,http://fitness.39.net/food/12655.html
+banana,香蕉,89.0,http://fitness.39.net/food/12836.html
+jackfruit,菠萝蜜,103.0,http://fitness.39.net/food/2495.html
+custard apple,蛋奶冻苹果,275.0,http://fitness.39.net/cook/17337.html
+pomegranate,石榴,83.0,http://fitness.39.net/food/12636.html
+acorn,橡子,387.0,http://fitness.39.net/food/11403.html
 hip,髋关节
 ear,耳朵
 rapeseed,油菜
-corn,玉米
+corn,玉米,196.0,http://fitness.39.net/food/1364.html
 buckeye,七叶树
 organ,器官
 upright,直立的
