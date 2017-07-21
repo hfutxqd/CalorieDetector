@@ -8,7 +8,6 @@
     <ImageView
         android:id="@+id/iv_food"
         android:scaleType="centerCrop"
-        android:src="@drawable/fruit_holder"
         android:layout_width="match_parent"
         android:layout_height="250dp" />
 

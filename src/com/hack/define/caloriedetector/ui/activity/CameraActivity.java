@@ -56,6 +56,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
     LOGGER.d("onCreate " + this);
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     setContentView(R.layout.activity_camera);
 

@@ -956,7 +956,7 @@ ballplayer,棒球手
 goblet,高脚杯
 gyromitra,鹿花菌属
 stretcher,担架
-water bottle,一瓶水
+water bottle,一瓶水,0,http://fitness.39.net/food/7771.html
 dial telephone,拨打电话
 soap dispenser,皂液器
 jersey,泽西

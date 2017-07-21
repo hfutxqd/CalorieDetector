@@ -31,6 +31,7 @@
                 android:layout_height="200dp"
                 android:layout_margin="8dp"
                 app:cardElevation="@dimen/cardview_compat_inset_shadow"
+                app:cardCornerRadius="3dp"
                 app:cardBackgroundColor="@color/cardview_light_background"
                 >
                 <RelativeLayout

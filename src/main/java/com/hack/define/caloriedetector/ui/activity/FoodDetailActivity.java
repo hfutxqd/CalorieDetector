@@ -22,6 +22,7 @@ import com.hack.define.caloriedetector.server.model.Food;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -58,7 +59,7 @@ public class FoodDetailActivity extends AppCompatActivity {
 
     private DetectResult mData;
     private boolean hasCollected;
-
+    private int[] mImgRes = {R.drawable.fruit_holder,R.drawable.fruit_holder1,R.drawable.fruit_holder2,R.drawable.fruit_holder3};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,9 @@ public class FoodDetailActivity extends AppCompatActivity {
         String url = intent.getStringExtra(EXTRA_URL);
         String title = intent.getStringExtra(EXTRA_TITLE);
         String subTitle = intent.getStringExtra(EXTRA_SUBTITLE);
+
+        int holderImgRes = mImgRes[(int)(Math.random() * mImgRes.length)];
+        mFoodBanner.setImageResource(holderImgRes);
 
         if (!TextUtils.isEmpty(url) && !TextUtils.isEmpty(title)) {
             new LoadDetailTask(this).execute(url);
