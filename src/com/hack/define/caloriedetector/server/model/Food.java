@@ -20,7 +20,7 @@ public class Food {
 
     @Override
     public String toString() {
-        return "Food{" +
+        return "DetectResult{" +
                 "componentTab=" + componentTab +
                 ", advantages='" + advantages + '\'' +
                 ", disadvantages='" + disadvantages + '\'' +

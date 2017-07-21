@@ -33,16 +33,16 @@ import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hack.define.caloriedetector.MyApplication;
 import com.hack.define.caloriedetector.R;
-import com.hack.define.caloriedetector.data.Food;
+import com.hack.define.caloriedetector.data.DetectResult;
 import com.hack.define.caloriedetector.env.BorderedText;
 import com.hack.define.caloriedetector.env.ImageUtils;
 import com.hack.define.caloriedetector.env.Logger;
 import com.hack.define.caloriedetector.model.Classifier;
 import com.hack.define.caloriedetector.model.TensorFlowImageClassifier;
-import com.hack.define.caloriedetector.ui.activity.CameraActivity;
 import com.hack.define.caloriedetector.widget.OverlayView;
 
 import java.util.List;
@@ -111,6 +111,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private TextView mTipTitle;
     private TextView mTipHint;
     private ImageButton mBtnNxt;
+    private DetectResult mDetectResult;
 
     @Override
     protected int getLayoutId() {
@@ -151,6 +152,19 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         mTipHint = (TextView) findViewById(R.id.tip_hint);
 
         mBtnNxt = (ImageButton) findViewById(R.id.btn_bottom_nxt);
+        mBtnNxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mDetectResult != null) {
+                    if (mDetectResult.detailUrl != null) {
+                        String subTitle = mDetectResult.calorie + " cal / 500g";
+                        FoodDetailActivity.startActivity(ClassifierActivity.this,mDetectResult.detailUrl,mDetectResult.name,subTitle);
+                    } else {
+                        Toast.makeText(ClassifierActivity.this, "暂无详情", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
         final Display display = getWindowManager().getDefaultDisplay();
         final int screenOrientation = display.getRotation();
@@ -256,9 +270,10 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                                         if (recog.getConfidence() > bestMatch.getConfidence())
                                             bestMatch = recog;
                                     }
-                                    Food food = MyApplication.getCacheData().get(bestMatch.getTitle());
+                                    DetectResult food = MyApplication.getCacheData().get(bestMatch.getTitle());
                                     if (food != null) {
                                         String possibleHint = null;
+                                        mDetectResult = food;
                                         // draw tip
                                         mTipTitle.setText(food.name);
                                         if (food.detailUrl != null) {

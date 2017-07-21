@@ -2,9 +2,8 @@ package com.hack.define.caloriedetector;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.text.TextUtils;
 
-import com.hack.define.caloriedetector.data.Food;
+import com.hack.define.caloriedetector.data.DetectResult;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +17,7 @@ import java.util.HashMap;
 
 public class MyApplication extends Application {
 
-    private static HashMap<String,Food> mData = new HashMap<>();
+    private static HashMap<String,DetectResult> mData = new HashMap<>();
 
 
 
@@ -41,11 +40,11 @@ public class MyApplication extends Application {
                             String name = dataCol[1];
                             float energy = Float.valueOf(dataCol[2]);
                             String url = dataCol[3];
-                            mData.put(id,new Food(id,name,energy,url));
+                            mData.put(id,new DetectResult(id,name,energy,url));
                         } else if (dataCol.length == 2) {
                             String id = dataCol[0];
                             String name = dataCol[1];
-                            mData.put(id,new Food(id,name,-1,null));
+                            mData.put(id,new DetectResult(id,name,-1,null));
                         }
                     }
 
@@ -64,7 +63,7 @@ public class MyApplication extends Application {
         mData.clear();
     }
 
-    public static HashMap<String, Food> getCacheData() {
+    public static HashMap<String, DetectResult> getCacheData() {
         return mData;
     }
 }
