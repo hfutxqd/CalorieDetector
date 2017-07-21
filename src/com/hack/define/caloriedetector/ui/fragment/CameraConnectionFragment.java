@@ -485,13 +485,9 @@ public class CameraConnectionFragment extends Fragment {
    */
   private void stopBackgroundThread() {
     backgroundThread.quitSafely();
-    try {
-      backgroundThread.join();
+      backgroundThread.interrupt();
       backgroundThread = null;
       backgroundHandler = null;
-    } catch (final InterruptedException e) {
-      LOGGER.e(e, "Exception!");
-    }
   }
 
   private final CameraCaptureSession.CaptureCallback captureCallback =
