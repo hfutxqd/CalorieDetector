@@ -19,5 +19,5 @@
 
     <style name="MaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="MaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="MaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 </resources>
