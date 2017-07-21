@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.ui.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -32,9 +32,14 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
 
+import com.hack.define.caloriedetector.R;
 import com.hack.define.caloriedetector.env.BorderedText;
 import com.hack.define.caloriedetector.env.ImageUtils;
 import com.hack.define.caloriedetector.env.Logger;
+import com.hack.define.caloriedetector.model.Classifier;
+import com.hack.define.caloriedetector.model.TensorFlowImageClassifier;
+import com.hack.define.caloriedetector.widget.OverlayView;
+import com.hack.define.caloriedetector.widget.ResultsView;
 
 import java.util.List;
 import java.util.Vector;

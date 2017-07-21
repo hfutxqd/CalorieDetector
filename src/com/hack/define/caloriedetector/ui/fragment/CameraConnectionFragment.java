@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
@@ -42,6 +40,9 @@ import android.media.ImageReader.OnImageAvailableListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -52,7 +53,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.hack.define.caloriedetector.R;
 import com.hack.define.caloriedetector.env.Logger;
+import com.hack.define.caloriedetector.widget.AutoFitTextureView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -228,6 +231,7 @@ public class CameraConnectionFragment extends Fragment {
 
   private final ConnectionCallback cameraConnectionCallback;
 
+  @SuppressLint("ValidFragment")
   private CameraConnectionFragment(
       final ConnectionCallback connectionCallback,
       final OnImageAvailableListener imageListener,

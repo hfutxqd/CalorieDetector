@@ -14,11 +14,9 @@
  * limitations under the License.
  */
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.ui.activity;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.pm.PackageManager;
 import android.media.Image.Plane;
 import android.media.ImageReader.OnImageAvailableListener;
@@ -26,16 +24,21 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Size;
 import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.hack.define.caloriedetector.R;
 import com.hack.define.caloriedetector.env.Logger;
+import com.hack.define.caloriedetector.ui.fragment.CameraConnectionFragment;
+import com.hack.define.caloriedetector.widget.OverlayView;
 
 import java.nio.ByteBuffer;
 
-public abstract class CameraActivity extends Activity implements OnImageAvailableListener {
+public abstract class CameraActivity extends AppCompatActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
 
   private static final int PERMISSIONS_REQUEST = 1;
@@ -136,7 +139,8 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
 
   private boolean hasPermission() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      return checkSelfPermission(PERMISSION_CAMERA) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_STORAGE) == PackageManager.PERMISSION_GRANTED;
+      return checkSelfPermission(PERMISSION_CAMERA) == PackageManager.PERMISSION_GRANTED
+              && checkSelfPermission(PERMISSION_STORAGE) == PackageManager.PERMISSION_GRANTED;
     } else {
       return true;
     }
@@ -164,7 +168,7 @@ public abstract class CameraActivity extends Activity implements OnImageAvailabl
             getLayoutId(),
             getDesiredPreviewFrameSize());
 
-    getFragmentManager()
+    getSupportFragmentManager()
         .beginTransaction()
         .replace(R.id.container, fragment)
         .commit();

@@ -17,19 +17,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hack.define.caloriedetector.AutoFitTextureView
+    <com.hack.define.caloriedetector.widget.AutoFitTextureView
         android:id="@+id/texture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
-    <com.hack.define.caloriedetector.RecognitionScoreView
+    <com.hack.define.caloriedetector.widget.RecognitionScoreView
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="112dp"
         android:layout_alignParentTop="true" />
 
-    <com.hack.define.caloriedetector.OverlayView
+    <com.hack.define.caloriedetector.widget.OverlayView
         android:id="@+id/debug_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

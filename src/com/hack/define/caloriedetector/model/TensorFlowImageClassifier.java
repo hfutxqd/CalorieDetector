@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.model;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;

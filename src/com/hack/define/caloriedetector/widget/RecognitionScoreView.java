@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -21,6 +21,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+
+import com.hack.define.caloriedetector.model.Classifier;
 
 import java.util.List;
 

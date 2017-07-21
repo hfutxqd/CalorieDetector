@@ -32,7 +32,7 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@style/MaterialTheme">
 
-        <activity android:name="com.hack.define.caloriedetector.ClassifierActivity"
+        <activity android:name="com.hack.define.caloriedetector.ui.activity.ClassifierActivity"
                   android:screenOrientation="portrait"
                   android:label="@string/activity_name_classification">
             <intent-filter>

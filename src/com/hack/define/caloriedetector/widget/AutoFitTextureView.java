@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hack.define.caloriedetector;
+package com.hack.define.caloriedetector.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
