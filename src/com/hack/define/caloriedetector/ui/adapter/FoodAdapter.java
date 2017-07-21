@@ -23,12 +23,12 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
     List<DetectResult> mData;
 
     public FoodAdapter() {
-        mData = DetectResult.find(DetectResult.class, null);
+        mData = new ArrayList<>();
     }
 
     public void update() {
         mData.clear();
-        mData.addAll(DetectResult.find(DetectResult.class, null));
+
         notifyDataSetChanged();
     }
 
