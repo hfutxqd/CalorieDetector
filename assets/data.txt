@@ -1,0 +1,1001 @@
+dummy,笨蛋
+kit fox,狐狸
+English setter,英语二传手
+Siberian husky,西伯利亚雪橇犬
+Australian terrier,澳大利亚梗
+English springer,英国史宾格
+grey whale,灰鲸
+lesser panda,小熊猫
+Egyptian cat,埃及猫
+ibex,山羊
+Persian cat,波斯猫
+cougar,美洲狮
+gazelle,瞪羚
+porcupine,豪猪
+sea lion,海狮
+malamute,阿拉斯加
+badger,獾
+Great Dane,大丹犬
+Walker hound,沃克猎犬
+Welsh springer spaniel,威尔士激飞猎犬
+whippet,惠比特犬
+Scottish deerhound,苏格兰猎鹿犬
+killer whale,虎鲸
+mink,水貂
+African elephant,非洲大象
+Weimaraner,威玛猎犬
+soft-coated wheaten terrier,软毛小麦梗
+Dandie Dinmont,丹迪丁蒙梗
+red wolf,红色的狼
+Old English sheepdog,英国古代牧羊犬
+jaguar,美洲虎
+otterhound,奥达猎犬
+bloodhound,寻血猎犬
+Airedale,大狗
+hyena,鬣狗
+meerkat,猫鼬
+giant schnauzer,巨型雪纳瑞
+titi,伶猴
+three-toed sloth,树懒
+sorrel,酢浆草
+black-footed ferret,黑脚貂
+dalmatian,达尔马提亚
+black-and-tan coonhound,黑褐猎浣熊犬
+papillon,巴比
+skunk,臭鼬
+Staffordshire bullterrier,斯塔福德郡牛头梗
+Mexican hairless,墨西哥无毛
+Bouvier des Flandres,法兰德斯牧牛狗
+weasel,黄鼠狼
+miniature poodle,迷你型
+Cardigan,开衫
+malinois,马里努阿犬
+bighorn,大角
+fox squirrel,狐松鼠
+colobus,疣
+tiger cat,猫虎
+Lhasa,拉萨
+impala,黑斑羚
+coyote,郊狼
+Yorkshire terrier,约克郡梗
+Newfoundland,纽芬兰岛
+brown bear,棕熊
+red fox,红狐狸
+Norwegian elkhound,挪威猎
+Rottweiler,罗威
+hartebeest,狷羚
+Saluki,萨路基
+grey fox,灰色的狐狸
+schipperke,舒柏奇犬
+Pekinese,北京
+Brabancon griffon,布拉班康梭结狮鹫
+West Highland white terrier,西部高地白梗
+Sealyham terrier,西里汉
+guenon,长尾猴
+mongoose,猫鼬
+indri,大狐猴
+tiger,老虎
+Irish wolfhound,爱尔兰猎狼犬
+wild boar,野猪
+EntleBucher,Entlebucher
+zebra,斑马
+ram,猛撞
+French bulldog,法国斗牛犬
+orangutan,猩猩
+basenji,巴辛吉
+leopard,豹
+Bernese mountain dog,伯恩山犬
+Maltese dog,马尔济斯犬
+Norfolk terrier,诺福克梗
+toy terrier,玩具犬
+vizsla,维兹拉犬
+cairn,凯恩
+squirrel monkey,松鼠猴
+groenendael,牧羊
+clumber,克拉姆
+Siamese cat,暹罗猫
+chimpanzee,黑猩猩
+komondor,可蒙犬
+Afghan hound,阿富汗猎犬
+Japanese spaniel,日本猎犬
+proboscis monkey,长鼻猴
+guinea pig,豚鼠
+white wolf,白狼
+ice bear,冰结
+gorilla,大猩猩
+borzoi,猎狼
+toy poodle,玩具贵宾犬
+Kerry blue terrier,凯丽蓝梗
+ox,公牛
+Scotch terrier,苏格兰梗
+Tibetan mastiff,藏獒
+spider monkey,蜘蛛猴
+Doberman,杜宾犬
+Boston bull,波士顿公牛
+Greater Swiss Mountain dog,大瑞士山地犬
+Appenzeller,阿彭策尔
+Shih-Tzu,西施
+Irish water spaniel,爱尔兰水猎犬
+Pomeranian,博美犬
+Bedlington terrier,贝德灵顿梗
+warthog,疣猪
+Arabian camel,阿拉伯骆驼
+siamang,合趾猿
+miniature schnauzer,迷你雪纳瑞
+collie,牧羊犬
+golden retriever,金毛猎犬
+Irish terrier,爱尔兰梗
+affenpinscher,猴绠
+Border collie,边境牧羊犬
+hare,野兔
+boxer,拳击手
+silky terrier,丝毛梗
+beagle,比格犬
+Leonberg,莱昂贝格
+German short-haired pointer,德国短毛猎犬
+patas,猴
+dhole,豺
+baboon,狒狒
+macaque,猕猴
+Chesapeake Bay retriever,乞沙比克猎犬
+bull mastiff,斗牛獒犬
+kuvasz,哥威斯犬
+capuchin,卷尾猴
+pug,帕格
+curly-coated retriever,卷毛寻回犬
+Norwich terrier,诺维奇梗
+flat-coated retriever,平毛寻回犬
+hog,猪
+keeshond,软件名称
+Eskimo dog,爱斯基摩犬
+Brittany spaniel,布列塔尼犬
+standard poodle,标准贵宾犬
+Lakeland terrier,莱克兰梗
+snow leopard,雪豹
+Gordon setter,戈登雪达犬
+dingo,澳洲野狗
+standard schnauzer,标准雪纳瑞
+hamster,仓鼠
+Tibetan terrier,西藏梗
+Arctic fox,北极狐
+wire-haired fox terrier,长毛猎狐梗
+basset,巴吉度
+water buffalo,水牛
+American black bear,美洲黑熊
+Angora,安哥拉
+bison,野牛
+howler monkey,吼猴
+hippopotamus,河马
+chow,食物
+giant panda,大熊猫
+American Staffordshire terrier,美国斯塔福德郡梗
+Shetland sheepdog,喜乐蒂牧羊犬
+Great Pyrenees,大白熊犬
+Chihuahua,奇瓦瓦
+tabby,斑猫
+marmoset,狨
+Labrador retriever,拉布拉多猎犬
+Saint Bernard,圣伯纳德
+armadillo,犰狳
+Samoyed,萨摩耶
+bluetick,法老
+redbone,红骨
+polecat,臭鼬
+marmot,土拨鼠
+kelpie,水鬼
+gibbon,长臂猿
+llama,美洲驼
+miniature pinscher,迷你杜宾犬
+wood rabbit,木兔
+Italian greyhound,意大利灵缇
+lion,狮子
+cocker spaniel,可卡犬
+Irish setter,爱尔兰雪达犬
+dugong,儒艮
+Indian elephant,印度大象
+beaver,海狸
+Sussex spaniel,萨塞克斯猎犬
+Pembroke,彭布罗克
+Blenheim spaniel,布莱尼姆猎犬
+Madagascar cat,马达加斯加的猫
+Rhodesian ridgeback,罗得西亚脊背犬
+lynx,天猫
+African hunting dog,非洲猎狗
+langur,叶猴
+Ibizan hound,依比沙猎犬
+timber wolf,大灰狼
+cheetah,猎豹
+English foxhound,英国猎狐犬
+briard,伯瑞犬
+sloth bear,懒熊
+Border terrier,边境梗
+German shepherd,德国牧羊犬
+otter,水獭
+koala,考拉
+tusker,塔斯克
+echidna,针鼹
+wallaby,袋鼠
+platypus,鸭嘴兽
+wombat,袋熊
+revolver,左轮手枪
+umbrella,雨伞
+schooner,帆船
+soccer ball,足球
+accordion,手风琴
+ant,蚂蚁
+starfish,海星
+chambered nautilus,珍珠鹦鹉螺
+grand piano,大钢琴
+laptop,笔记本电脑
+strawberry,草莓
+airliner,客机
+warplane,战机
+airship,飞艇
+balloon,气球
+space shuttle,航天飞机
+fireboat,消防船
+gondola,贡多拉
+speedboat,快艇
+lifeboat,救生艇
+canoe,独木舟
+yawl,快艇
+catamaran,双体船
+trimaran,三体船
+container ship,集装箱船
+liner,衬垫
+pirate,海盗
+aircraft carrier,航空母舰
+submarine,潜艇
+wreck,沉船
+half track,半履带
+tank,坦克
+missile,导弹
+bobsled,雪橇
+dogsled,狗拉雪橇
+bicycle-built-for-two,双人自行车
+mountain bike,山地自行车
+freight car,货运车
+passenger car,客车
+barrow,巴罗
+shopping cart,购物车
+motor scooter,摩托车
+forklift,叉车
+electric locomotive,电力机车
+steam locomotive,蒸汽机车
+amphibian,两栖动物
+ambulance,救护车
+beach wagon,沙滩车
+cab,驾驶室
+convertible,可转换
+jeep,吉普车
+limousine,豪华轿车
+minivan,面包车
+Model T,T模型
+racer,赛车
+sports car,跑车
+go-kart,卡丁车
+golfcart,golfcart
+moped,助力车
+snowplow,扫雪机
+fire engine,消防车
+garbage truck,垃圾车
+pickup,拾取
+tow truck,拖车
+trailer truck,拖车
+moving van,移动车
+police van,警车
+recreational vehicle,休闲车
+streetcar,有轨电车
+snowmobile,雪橇
+tractor,拖拉机
+mobile home,移动的家
+tricycle,三轮车
+unicycle,独轮车
+horse cart,马车
+jinrikisha,人力车
+oxcart,牛车
+bassinet,摇篮
+cradle,摇篮
+crib,婴儿床
+four-poster,四张海报
+bookcase,书柜
+china cabinet,中国的内阁
+medicine chest,药箱
+chiffonier,衣柜
+table lamp,台灯
+file,文件
+park bench,公园的长椅上
+barber chair,理发椅
+throne,宝座
+folding chair,折叠椅
+rocking chair,摇椅
+studio couch,工作室的沙发
+toilet seat,马桶座
+desk,书桌
+pool table,台球桌
+dining table,餐桌
+entertainment center,娱乐中心
+wardrobe,衣柜
+Granny Smith,澳洲青苹
+orange,橙色
+lemon,柠檬
+fig,图
+pineapple,菠萝
+banana,香蕉
+jackfruit,菠萝蜜
+custard apple,蛋奶冻苹果
+pomegranate,石榴
+acorn,橡子
+hip,髋关节
+ear,耳朵
+rapeseed,油菜
+corn,玉米
+buckeye,七叶树
+organ,器官
+upright,直立的
+chime,编钟
+drum,鼓
+gong,公
+maraca,沙球
+marimba,木琴
+steel drum,钢筒
+banjo,班卓琴
+cello,大提琴
+violin,小提琴
+harp,竖琴
+acoustic guitar,原声吉他
+electric guitar,电吉他
+cornet,短号
+French horn,法国号
+trombone,长号
+harmonica,口琴
+ocarina,陶笛
+panpipe,排箫
+bassoon,巴松管
+oboe,双簧管
+sax,萨克斯
+flute,长笛
+daisy,雏菊
+yellow lady's slipper,黄女士拖鞋
+cliff,悬崖
+valley,山谷
+alp,ALP
+volcano,火山
+promontory,海角
+sandbar,沙洲
+coral reef,珊瑚礁
+lakeside,湖畔
+seashore,海滨
+geyser,间歇泉
+hatchet,斧头
+cleaver,切肉刀
+letter opener,开信刀
+plane,飞机
+power drill,电钻
+lawn mower,割草机
+hammer,铁锤
+corkscrew,开瓶器
+can opener,开罐器
+plunger,柱塞
+screwdriver,螺丝刀
+shovel,铲子
+plow,犁
+chain saw,链锯
+cock,公鸡
+hen,母鸡
+ostrich,鸵鸟
+brambling,燕雀
+goldfinch,金翅雀
+house finch,家朱雀
+junco,碛
+indigo bunting,靛蓝鹀
+robin,罗宾
+bulbul,鹎
+jay,松鸦
+magpie,喜鹊
+chickadee,山雀
+water ouzel,河鸟
+kite,风筝
+bald eagle,秃头鹰
+vulture,秃鹫
+great grey owl,乌林鸮
+black grouse,黑琴鸡
+ptarmigan,雷鸟
+ruffed grouse,松鸡
+prairie chicken,草原鸡
+peacock,孔雀
+quail,鹌鹑
+partridge,鹧鸪
+African grey,非洲灰
+macaw,金刚鹦鹉
+sulphur-crested cockatoo,葵花鹦鹉
+lorikeet,吸蜜鹦鹉
+coucal,鸦鹃
+bee eater,蜂虎
+hornbill,犀鸟
+hummingbird,蜂鸟
+jacamar,食虫鸟
+toucan,巨嘴鸟
+drake,公鸭
+red-breasted merganser,红胸秋沙鸭
+goose,鹅
+black swan,黑天鹅
+white stork,白鹳
+black stork,黑鹳
+spoonbill,琵鹭
+flamingo,火烈鸟
+American egret,美洲白鹭
+little blue heron,小蓝鹭
+bittern,卤水
+crane,起重机
+limpkin,秧鹤
+American coot,水鸡
+bustard,鸨
+ruddy turnstone,翻石鹬
+red-backed sandpiper,红背鹬
+redshank,红脚鹬
+dowitcher,半蹼鹬
+oystercatcher,蛎鹬
+European gallinule,欧洲的水鸡
+pelican,鹈鹕
+king penguin,国王企鹅
+albatross,信天翁
+great white shark,大白鲨
+tiger shark,虎鲨
+hammerhead,锤头
+electric ray,电雷
+stingray,黄貂鱼
+barracouta,杖鱼
+coho,银
+tench,丁
+goldfish,金鱼
+eel,鳗鱼
+rock beauty,岩石之美
+anemone fish,海葵鱼
+lionfish,狮子鱼,116.0,http://fitness.39.net/cook/12384.html
+puffer,河豚,81.0,http://fitness.39.net/food/4148.html
+sturgeon,鲟鱼,105.0,http://fitness.39.net/food/10550.html
+gar,雀鳝
+loggerhead,海龟
+leatherback turtle,棱皮龟
+mud turtle,泥龟
+terrapin,鳖
+box turtle,箱龟
+banded gecko,条纹壁虎
+common iguana,普通鬣蜥
+American chameleon,美国的变色龙
+whiptail,鞭尾蜥蜴
+agama,阿含经
+frilled lizard,皱褶蜥蜴
+alligator lizard,鳄蜥
+Gila monster,Gila的怪物
+green lizard,绿蜥蜴
+African chameleon,非洲的变色龙
+Komodo dragon,科莫多龙
+triceratops,三角龙
+African crocodile,非洲鳄鱼
+American alligator,美国短吻鳄
+thunder snake,雷蛇
+ringneck snake,灵内克的蛇
+hognose snake,猪鼻蛇
+green snake,绿色的蛇
+king snake,大王蛇
+garter snake,乌梢蛇
+water snake,水蛇
+vine snake,藤蛇
+night snake,夜蛇
+boa constrictor,大蟒蛇
+rock python,岩蟒
+Indian cobra,印度眼镜蛇
+green mamba,曼巴蛇
+sea snake,海蛇
+horned viper,角蝰
+diamondback,小菜
+sidewinder,响尾蛇
+European fire salamander,欧洲火蝾螈
+common newt,常见的蝾螈
+eft,EFT
+spotted salamander,斑点蝾螈
+axolotl,蝾螈
+bullfrog,牛蛙,81.0,http://fitness.39.net/food/2956.html
+tree frog,树蛙
+tailed frog,尾蟾
+whistle,吹口哨
+wing,翼
+paintbrush,画笔
+hand blower,手摇鼓风机
+oxygen mask,氧气面罩
+snorkel,通气管
+loudspeaker,扬声器
+microphone,麦克风
+screen,屏幕
+mouse,鼠标
+electric fan,电风扇
+oil filter,滤油器
+strainer,过滤器
+space heater,空间加热器
+stove,火炉
+guillotine,断头台
+barometer,气压计
+rule,规则
+odometer,里程表
+scale,规模
+analog clock,模拟时钟
+digital clock,数字时钟
+wall clock,墙上的时钟
+hourglass,沙漏
+sundial,日晷
+parking meter,停车收费表
+stopwatch,秒表
+digital watch,数字手表
+stethoscope,听诊器
+syringe,注射器
+magnetic compass,磁罗盘
+binoculars,双筒望远镜
+projector,投影机
+sunglasses,太阳镜
+loupe,放大镜
+radio telescope,射电望远镜
+bow,弓
+cannon [ground],大炮[地]
+assault rifle,突击步枪
+rifle,步枪
+projectile,弹丸
+computer keyboard,电脑键盘
+typewriter keyboard,打字机键盘
+crane,起重机
+lighter,打火机
+abacus,算盘
+cash machine,提款机
+slide rule,计算尺
+desktop computer,台式电脑
+hand-held computer,手提电脑
+notebook,笔记本
+web site,网站
+harvester,收割机
+thresher,脱粒机
+printer,打印机
+slot,狭槽
+vending machine,自动售货机
+sewing machine,缝纫机
+joystick,操纵杆
+switch,转换
+hook,钩
+car wheel,汽车轮
+paddlewheel,轮桨
+pinwheel,风车
+potter's wheel,波特的车轮
+gas pump,气体泵
+carousel,旋转木马
+swing,摆动
+reel,卷轴
+radiator,散热器
+puck,冰球
+hard disc,硬盘
+sunglass,太阳镜
+pick,挑选
+car mirror,车镜
+solar dish,碟式太阳能
+remote control,远程控制
+disk brake,盘式制动器
+buckle,搭扣
+hair slide,头发滑
+knot,结
+combination lock,组合锁
+padlock,挂锁
+nail,指甲
+safety pin,安全销
+screw,螺丝钉
+muzzle,枪口
+seat belt,座椅安全带
+ski,滑雪
+candle,蜡烛
+jack-o'-lantern,南瓜灯笼
+spotlight,聚光灯
+torch,火炬
+neck brace,颈托
+pier,码头
+tripod,三脚架
+maypole,花柱
+mousetrap,捕鼠器
+spider web,蜘蛛网
+trilobite,三叶虫
+harvestman,收割
+scorpion,蝎子,177.0,http://fitness.39.net/food/3070.html
+black and gold garden spider,黑金色花园蜘蛛
+barn spider,谷仓蜘蛛
+garden spider,花园里的蜘蛛
+black widow,黑寡妇
+tarantula,狼蛛
+wolf spider,狼蜘蛛
+tick,打上钩
+centipede,蜈蚣
+isopod,等足目动物
+Dungeness crab,珍宝蟹,86.0,http://fitness.39.net/food/10514.html
+rock crab,岩蟹
+fiddler crab,招潮蟹
+king crab,帝王蟹,84.0,http://fitness.39.net/food/10521.html
+American lobster,美洲龙虾
+spiny lobster,龙虾,90.0,http://fitness.39.net/food/4194.html
+crayfish,小龙虾,93.0,http://fitness.39.net/food/4199.html
+hermit crab,寄居蟹
+tiger beetle,虎甲虫
+ladybug,瓢虫
+ground beetle,土鳖虫
+long-horned beetle,天牛
+leaf beetle,叶甲
+dung beetle,粪甲虫
+rhinoceros beetle,犀甲虫
+weevil,象甲
+fly,飞
+bee,蜜蜂
+grasshopper,蚱蜢
+cricket,板球
+walking stick,手杖
+cockroach,蟑螂
+mantis,螳螂
+cicada,蝉
+leafhopper,叶蝉
+lacewing,草蛉
+dragonfly,蜻蜓
+damselfly,豆娘
+admiral,海军上将
+ringlet,小环
+monarch,君主
+cabbage butterfly,菜粉蝶
+sulphur butterfly,白蝴蝶
+lycaenid,细纹
+jellyfish,水母
+sea anemone,海葵
+brain coral,脑珊瑚
+flatworm,扁虫
+nematode,线虫
+conch,海螺
+snail,蜗牛
+slug,塞
+sea slug,海蛞蝓
+chiton,石鳖
+sea urchin,海胆
+sea cucumber,海参
+iron,铁
+espresso maker,咖啡机
+microwave,微波
+Dutch oven,荷兰烤箱
+rotisserie,烤肉店
+toaster,烤面包机
+waffle iron,松饼机
+vacuum,真空
+dishwasher,洗碗机
+refrigerator,冰箱
+washer,洗衣机
+Crock Pot,瓦罐锅
+frying pan,煎锅
+wok,炒锅
+caldron,釜
+coffeepot,咖啡壶
+teapot,茶壶
+spatula,铲
+altar,祭坛
+triumphal arch,凯旋门
+patio,院子
+steel arch bridge,钢拱桥
+suspension bridge,悬索桥
+viaduct,高架桥
+barn,谷仓
+greenhouse,温室
+palace,宫殿
+monastery,修道院
+library,图书馆
+apiary,养蜂场
+boathouse,船屋
+church,教堂
+mosque,清真寺
+stupa,佛塔
+planetarium,天文馆
+restaurant,餐厅
+cinema,电影院
+home theater,家庭影院
+lumbermill,锯木厂
+coil,线圈
+obelisk,方尖碑
+totem pole,图腾柱
+castle,城堡
+prison,监狱
+grocery store,杂货店
+bakery,面包店
+barbershop,理发店
+bookshop,书店
+butcher shop,肉店
+confectionery,糕点糖果
+shoe shop,鞋店
+tobacco shop,烟草店
+toyshop,玩具店
+fountain,喷泉
+cliff dwelling,崖居
+yurt,蒙古包
+dock,码头
+brass,黄铜
+megalith,巨石
+bannister,班尼斯特
+breakwater,防波堤
+dam,水坝
+chainlink fence,围栏
+picket fence,栅栏
+worm fence,蠕虫的篱笆
+stone wall,石头墙
+grille,格栅
+sliding door,滑动门
+turnstile,十字转门
+mountain tent,登山帐
+scoreboard,记分牌
+honeycomb,蜂窝
+plate rack,板架
+pedestal,底座
+beacon,信标
+mashed potato,土豆泥,89.0,http://fitness.39.net/food/8739.html
+bell pepper,甜椒,16.0,http://fitness.39.net/food/1886.html
+head cabbage,结球甘蓝,12.0,http://fitness.39.net/food/2052.html
+broccoli,西兰花,28.0,http://fitness.39.net/food/1996.html
+cauliflower,菜花,23.0,http://fitness.39.net/food/1994.html
+zucchini,西葫芦,16.0,http://fitness.39.net/food/1907.html
+spaghetti squash,意大利面壁球
+acorn squash,小青南瓜,23.0,http://fitness.39.net/food/1902.html
+butternut squash,南瓜,23.0,http://fitness.39.net/food/1902.html
+cucumber,黄瓜,16.0,http://fitness.39.net/food/1897.html
+artichoke,朝鲜蓟,25.0,http://fitness.39.net/food/17015.html
+cardoon,朝鲜蓟,25.0,http://fitness.39.net/food/17015.html
+mushroom,蘑菇,22.0,http://fitness.39.net/food/2286.html
+shower curtain,浴帘
+jean,琼
+carton,纸箱
+handkerchief,手帕
+sandal,凉鞋
+ashcan,垃圾桶
+safe,安全的
+plate,盘子
+necklace,项链
+croquet ball,槌球
+fur coat,毛皮大衣
+thimble,顶针
+pajama,睡衣
+running shoe,跑步鞋
+cocktail shaker,鸡尾酒调酒器
+chest,胸部
+manhole cover,窨井盖
+modem,调制解调器
+tub,桶
+tray,托盘
+balance beam,平衡梁
+bagel,百吉饼,250.0,http://fitness.39.net/food/9297.html
+prayer rug,祈祷毯
+kimono,和服
+hot pot,火锅
+whiskey jug,威士忌的壶
+knee pad,护膝
+book jacket,护封
+spindle,主轴
+ski mask,滑雪面罩
+beer bottle,啤酒瓶
+crash helmet,头盔
+bottlecap,瓶盖
+tile roof,瓦屋顶
+mask,面具
+maillot,但
+Petri dish,培养皿
+football helmet,橄榄球头盔
+bathing cap,游泳帽
+teddy bear,泰迪熊
+holster,皮套
+pop bottle,波普瓶
+photocopier,复印机
+vestment,法衣
+crossword puzzle,纵横字谜
+golf ball,高尔夫球
+trifle,琐事
+suit,适合
+water tower,水塔
+feather boa,羽毛围巾
+cloak,斗篷
+red wine,红葡萄酒,74.0,http://fitness.39.net/food/7879.html
+drumstick,鼓槌
+shield,盾
+Christmas stocking,圣诞袜
+hoopskirt,有裙撑的裙子
+menu,菜单
+stage,阶段
+bonnet,阀盖
+meat loaf,瑞士肉包,244.0,http://fitness.39.net/cook/4982.html
+baseball,棒球
+face powder,脸上的粉
+scabbard,剑鞘
+sunscreen,防晒霜
+beer glass,啤酒杯
+hen-of-the-woods,树林中的母鸡
+guacamole,鳄梨酱,884.0,http://fitness.39.net/food/14026.html
+lampshade,灯罩
+wool,羊毛
+hay,干草
+bow tie,领结
+mailbag,邮包
+water jug,水壶
+bucket,水桶
+dishrag,抹布
+soup bowl,汤碗
+eggnog,蛋奶酒,88.0,http://fitness.39.net/food/14564.html
+mortar,砂浆
+trench coat,风衣
+paddle,桨
+chain,链
+swab,拭子
+mixing bowl,搅拌碗
+potpie,馅饼
+wine bottle,酒瓶
+shoji,商事
+bulletproof vest,防弹背心
+drilling platform,钻井平台
+binder,粘合剂
+cardigan,开衫
+sweatshirt,运动衫
+pot,锅
+birdhouse,鸟舍
+hamper,阻碍
+ping-pong ball,乒乓球
+pencil box,铅笔盒
+pay-phone,付费电话
+consomme,清汤
+apron,围裙
+punching bag,出气筒
+backpack,背包
+groom,新郎
+bearskin,熊皮
+pencil sharpener,卷笔刀
+broom,扫帚
+mosquito net,蚊帐
+abaya,长袍
+mortarboard,学位帽
+poncho,雨披
+crutch,拐杖
+Polaroid camera,宝丽来相机
+space bar,空格键
+cup,杯子
+racket,球拍
+traffic light,交通灯
+quill,羽毛笔
+radio,收音机
+dough,面团
+cuirass,胸甲
+military uniform,军装
+lipstick,口红
+shower cap,淋浴帽
+monitor,班长
+oscilloscope,示波器
+mitten,中华绒螯蟹,103.0,http://fitness.39.net/food/4221.html
+brassiere,胸罩
+French loaf,法国面包,265.0,http://fitness.39.net/food/1221.html
+vase,花瓶
+milk can,牛奶瓶
+rugby ball,橄榄球
+paper towel,纸巾
+earthstar,地星
+envelope,信封
+miniskirt,迷你裙
+cowboy hat,牛仔帽
+trolleybus,无轨电车
+perfume,香水
+bathtub,浴缸
+hotdog,热狗,247.0,http://fitness.39.net/food/8758.html
+coral fungus,珊瑚菌
+bullet train,动车
+pillow,枕头
+toilet tissue,卫生纸
+cassette,盒式录音带
+carpenter's kit,木匠的工具箱
+ladle,钢包
+stinkhorn,鬼笔
+lotion,洗剂
+hair spray,头发喷雾
+academic gown,学位袍
+dome,圆顶
+crate,机箱
+wig,假发
+burrito,玉米煎饼,238.0,http://fitness.39.net/food/8810.html
+pill bottle,药瓶
+chain mail,链甲
+theater curtain,幕布
+window shade,百叶窗
+barrel,桶
+washbasin,洗脸盆
+ballpoint,圆珠笔
+basketball,篮球
+bath towel,浴巾
+cowboy boot,牛仔靴
+gown,长袍
+window screen,纱窗
+agaric,木耳,25,http://fitness.39.net/food/12049.html
+cellular telephone,蜂窝电话
+nipple,乳头
+barbell,杠铃
+mailbox,邮箱
+lab coat,实验室外套
+fire screen,火屏
+minibus,小巴
+packet,小包裹
+maze,迷宫
+pole,极
+horizontal bar,单杠
+sombrero,宽边帽
+pickelhaube,尖顶头盔
+rain barrel,雨桶
+wallet,钱包
+cassette player,磁带播放器
+comic book,漫画书
+piggy bank,扑满
+street sign,街道标志
+bell cote,贝尔科特
+fountain pen,钢笔
+Windsor tie,温莎领带
+volleyball,排球
+overskirt,罩裙
+sarong,纱笼
+purse,钱包
+bolo tie,波洛领带
+bib,围兜
+parachute,降落伞
+sleeping bag,睡袋
+television,电视
+swimming trunks,游泳裤
+measuring cup,测量杯
+espresso,意大利浓咖啡
+pizza,披萨
+breastplate,胸甲
+shopping basket,购物篮
+wooden spoon,木勺子
+saltshaker,盐瓶
+chocolate sauce,巧克力酱,526.0,http://fitness.39.net/food/394.html
+ballplayer,棒球手
+goblet,高脚杯
+gyromitra,鹿花菌属
+stretcher,担架
+water bottle,一瓶水
+dial telephone,拨打电话
+soap dispenser,皂液器
+jersey,泽西
+school bus,校车
+jigsaw puzzle,拼图游戏
+plastic bag,塑料袋
+reflex camera,反射式照相机
+diaper,尿布
+Band Aid,创可贴
+ice lolly,冰棍
+velvet,天鹅绒
+tennis ball,网球
+gasmask,防毒面具
+doormat,门垫
+Loafer,游手好闲的人
+ice cream,冰淇淋,127.0,http://fitness.39.net/food/19199.html
+pretzel,椒盐脆饼,519.0,http://fitness.39.net/food/19342.html
+quilt,被子
+maillot,但
+tape player,磁带播放器
+clog,堵塞
+iPod,iPod
+bolete,牛肝菌
+scuba diver,潜水员
+pitcher,投掷者
+matchstick,火柴
+bikini,比基尼
+sock,短袜
+CD player,CD播放器
+lens cap,镜头盖
+thatch,茅草
+vault,拱顶
+beaker,烧杯
+bubble,气泡
+cheeseburger,芝士汉堡,239.0,http://fitness.39.net/cook/15660.html
+parallel bars,双杠
+flagpole,旗杆
+coffee mug,咖啡杯
+rubber eraser,橡皮
+stole,偷
+carbonara,培根,692.0,http://fitness.39.net/food/2762.html
+dumbbell,哑铃
