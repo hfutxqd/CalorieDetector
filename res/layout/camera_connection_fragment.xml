@@ -24,7 +24,6 @@
         android:layout_alignParentBottom="true" />
 
 
-
     <RelativeLayout
         android:id="@+id/tip_view"
         android:layout_width="match_parent"
