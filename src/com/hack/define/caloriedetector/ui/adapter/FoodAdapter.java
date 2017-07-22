@@ -80,7 +80,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodHolder> {
                 public void onClick(View v) {
                     DetectResult r = mData.get(getAdapterPosition());
                     FoodDetailActivity.startActivity(v.getContext(),r.detailUrl,r.name,
-                            String.format(Locale.getDefault(), "%.1f卡/100克", r.calorie),r);
+                            String.format(Locale.getDefault(), "%.1f cal / 100g", r.calorie),r);
                 }
             });
         }
