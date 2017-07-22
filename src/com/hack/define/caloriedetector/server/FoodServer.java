@@ -65,31 +65,20 @@ public class FoodServer {
 
         Elements content = doc.select("span[class=\"ju\"] p").not("p span");
         food.advantages = content.first().text();
-        System.out.println(food.advantages);
 
         food.disadvantages = content.last().text();
-        System.out.println(food.disadvantages);
 
         content = doc.select("span[id=\"food_to_sport\"] td");
         food.walk = content.get(1).text();
         food.running = content.get(3).text();
         food.skipping = content.get(5).text();
         food.aerobics = content.get(7).text();
-        System.out.println(food.walk);
-        System.out.println(food.running);
-        System.out.println(food.skipping);
-        System.out.println(food.aerobics);
 
 
         content = doc.select("div[id=\"chengfen\"] li");
         for (Element i : content) {
             food.componentTab.titles.add(i.child(0).text());
             food.componentTab.values.add(i.child(1).text());
-        }
-
-        for (int i = 0; i < food.componentTab.titles.size(); i++) {
-            System.out.println(food.componentTab.titles.get(i));
-            System.out.println(food.componentTab.values.get(i));
         }
 
         return food;
