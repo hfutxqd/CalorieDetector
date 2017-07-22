@@ -26,6 +26,8 @@ import android.media.Image;
 import android.media.Image.Plane;
 import android.media.ImageReader;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
@@ -114,8 +116,13 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private DetectResult mDetectResult;
     private float mBestMatchRate = -1;
 
+    private HandlerThread mThread = new HandlerThread("delay");
+    private Handler mHander;
+
     @Override
     protected int getLayoutId() {
+        mThread.start();
+        mHander = new Handler(mThread.getLooper());
         return R.layout.camera_connection_fragment;
     }
 
@@ -253,11 +260,6 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             ImageUtils.saveBitmap(croppedBitmap);
         }
 
-        // 识别到食物后停止识别
-        if (mDetectResult != null && mDetectResult.detailUrl != null && mBestMatchRate > 0.3f) {
-            return;
-        }
-
         runInBackground(
                 new Runnable() {
                     @Override
@@ -280,19 +282,29 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
                                     DetectResult food = MyApplication.getCacheData().get(bestMatch.getTitle());
                                     if (food != null) {
                                         String possibleHint = null;
-                                        mDetectResult = food;
+
                                         // draw tip
-                                        mTipTitle.setText(food.name);
                                         if (food.detailUrl != null) {
-                                            possibleHint = "可能性 " + (int)(bestMatch.getConfidence() * 100) + " %       卡路里：" + mDetectResult.calorie;
+                                            mTipTitle.setText(food.name);
+                                            possibleHint = "可能性 " + (int)(bestMatch.getConfidence() * 100) + " %       卡路里：" + food.calorie;
                                             mBtnNxt.setImageResource(R.drawable.ic_done_black_24dp);
                                             mBestMatchRate = bestMatch.getConfidence();
-                                        } else {
+                                            mDetectResult = food;
+                                            mTipHint.setText(possibleHint);
+                                            mHander.removeCallbacksAndMessages(null);
+                                            mHander.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    mDetectResult = null;
+                                                }
+                                            }, 3000);
+                                        } else if (mDetectResult == null) {
+                                            mTipTitle.setText(food.name);
                                             possibleHint = " 这个好像不能吃";
                                             mBtnNxt.setImageResource(R.drawable.selector_sad_happy);
                                             mBestMatchRate = -1;
+                                            mTipHint.setText(possibleHint);
                                         }
-                                        mTipHint.setText(possibleHint);
 
                                     }
 
