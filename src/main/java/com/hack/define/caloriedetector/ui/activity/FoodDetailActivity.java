@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.ContentLoadingProgressBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -108,9 +109,16 @@ public class FoodDetailActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_TITLE, title);
         intent.putExtra(EXTRA_SUBTITLE, subTitle);
         intent.putExtra(EXTRA_FOOD_DATA,data);
-        context.startActivity(intent);
+        Bundle bundle = ActivityOptionsCompat.makeCustomAnimation(context,
+                android.R.anim.fade_in, android.R.anim.fade_out).toBundle();
+        context.startActivity(intent,bundle);
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0,0);
+    }
 
     private static class LoadDetailTask extends AsyncTask<String, Void, Food> {
 
